@@ -5,7 +5,7 @@ import PersonIcon from "@mui/icons-material/Person"
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import { Colors } from "../../styles/theme";
 
-export default function Actions(matches) {
+export default function Actions({matches}) {
 
     const Component = matches ? ActionIconsContainerMobile : ActionIconsContainerDesktop;
 
