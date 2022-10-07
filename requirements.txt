@@ -2,3 +2,4 @@ npm install
 
 npm install @mui/material @emotion/react @emotion/styled
 npm install @fontsource/montez
+npm install polished
