@@ -3,6 +3,7 @@ import { ProductMetaWrapper } from "../../styles/products";
 
 
 
+
 export default function ProductMeta({product, matches}){
 
     return(

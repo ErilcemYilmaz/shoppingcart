@@ -1,8 +1,8 @@
-import { List, Typography } from "@mui/material";
+import { IconButton, List, Typography } from "@mui/material";
 import {styled} from "@mui/material/styles";
 import { Box } from "@mui/system";
 import "@fontsource/montez";
-import { Colors } from "../theme";
+import { Colors, DrawerWidth } from "../theme";
 // import { textPopUpTop } from "../../animation";
 
 //Container
@@ -55,4 +55,21 @@ export const ActionIconsContainerMobile = styled(Box) (() =>({
   zIndex: 99,  
   borderTop: `1px solid ${Colors.border}`
 
+}));
+
+
+export const MyList = styled(List)(({ type }) => ({
+  display: type === "row" ? "flex" : "block",
+  flexGrow: 3,
+justifyContent: "center",
+alignItems: "center",
+}));
+
+
+
+export const DrawerCloseButton = styled(IconButton)(() => ({
+position: 'absolute',
+top: 10,
+left: DrawerWidth,
+zIndex: 1999,      
 }));
