@@ -6,6 +6,10 @@ import Navbar from './components/navbar';
 import Banner from './components/banner';
 import Slider from './components/promotions';
 import Products from './components/products';
+import Footer from './components/footer';
+import AppDrawer from './components/drawer';
+import { UIProvider } from './context/ui';
+import SearchBox from './components/search';
 
 
 
@@ -21,13 +25,19 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="xl" sx={{ background: '#fff' }}
       >
-        <Navbar />
-        <Banner />
-        <Slider />
-        <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
-          <Typography variant="h4">Unsere Produkte</Typography>
-        </Box>
-        <Products />
+        <UIProvider>
+          <Navbar />
+          <Banner />
+          <Slider />
+          <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
+            <Typography variant="h4">Unsere Produkte</Typography>
+          </Box>
+          <Products />
+          <Footer />
+          <AppDrawer />
+          <SearchBox />
+        </UIProvider>
+
       </Container>
     </ThemeProvider>
 
