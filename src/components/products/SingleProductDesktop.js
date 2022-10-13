@@ -7,6 +7,7 @@ import { Stack } from "@mui/material";
 import { useState } from "react";
 import ProductDetail from "../productdetail";
 import useDialogModal from "../../hooks/useDialogModal";
+import useCart from "../../hooks/useCart";
 
 
 export default function SingleProduct({ product, matches }) {
@@ -15,6 +16,7 @@ export default function SingleProduct({ product, matches }) {
     const [showOptions, setShowOptions] = useState(false);
     const [ProductDetailDialog, showProductDetailDialog, closeProductDialog] =
     useDialogModal(ProductDetail);
+    const {addToCart, addToCartText} = useCart(product);
     const handleMouseEnter = () => {
         setShowOptions(true);
     }
@@ -30,10 +32,10 @@ export default function SingleProduct({ product, matches }) {
                     <FavoriteIcon />
                 </ProductFavButton>
                 {
-                    showOptions && <ProductAddToCart show={showOptions} variant="contained">In den Warenkorb</ProductAddToCart>
+                    showOptions && <ProductAddToCart onClick={addToCart} show={showOptions} variant="contained">{addToCartText}</ProductAddToCart>
                 }
-                <ProductActionsWrapper show={showOptions}>
-                    <Stack direction="column">
+                <ProductActionsWrapper show={showOptions || matches}>
+                <Stack direction={matches ? "row" : "column"}>
                         <ProductActionButton>
                             <ShareIcon color="primary" />
                         </ProductActionButton>
@@ -43,7 +45,7 @@ export default function SingleProduct({ product, matches }) {
                     </Stack>
                 </ProductActionsWrapper>
             </Product>
-            <ProductMeta product={product} matches={matches} />
+            <ProductMeta product={product}/>
             <ProductDetailDialog product={product} />
         </>
     );
