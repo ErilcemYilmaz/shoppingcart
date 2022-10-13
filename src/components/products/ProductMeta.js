@@ -8,12 +8,12 @@ export default function ProductMeta({product, matches}){
 
     return(
         <ProductMetaWrapper>
-            <Typography variant={matches ? 'h6':'h5' } lineheight={2}>
+            <Typography variant={matches ? "h6": "h5" } lineheight={0}>
                 {product.name}
             </Typography>
-            <Typography variant={matches ? 'caption': 'body1'}>
+            <Typography variant={matches ? "caption": "body1"}>
                 CHF{product.price}
             </Typography>
         </ProductMetaWrapper>
-    )
+    );
 }
