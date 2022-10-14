@@ -70,7 +70,7 @@ export default function Cart() {
                 display="flex" justifyContent={"center"}
                 flexdirection="column"
                 alignItems="center">
-                <Typography variant={matches ? "h5" : "h3"} color={Colors.black}>Warenkorb leer!</Typography>
+                <Typography variant={matches ? "h5" : "h3"} color={Colors.white}>Warenkorb leer!</Typography>
             </Box>
             )}
             <Button onClick={() => setShowCart(false)}>Schließen</Button>

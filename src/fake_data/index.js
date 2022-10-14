@@ -1,44 +1,37 @@
 export const products = [
     {
         id: 1,
-        name: "Super Backpack",
+        name: "Adalya Tabak",
         price: 129.99,
         description: "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
-        image: "/images/products/bag_01.png"
+        image: "/images/products/adalya_tabak.jpg"
     },
     {
         id: 2,
-        name: "New Hip",
+        name: "Black Nana",
         price: 199.99,
         description: "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
-        image: "/images/products/bag_02.png"
+        image: "/images/products/black_nana.jpg"
     },
     {
         id: 3,
-        name: "Elite Series",
+        name: "Lady Killer",
         price: 189.99,
         description: "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
-        image: "/images/products/bag_03.png"
+        image: "/images/products/lady_killer.jpg"
     },
     {
         id: 4,
-        name: "Casual",
+        name: "Lemon Chill",
         price: 129.99,
         description: "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
-        image: "/images/products/bag_04.png"
+        image: "/images/products/lemon_chill.jpg"
     },
     {
         id: 5,
-        name: "Best Tote",
+        name: "Os Tabacco",
         price: 399.99,
         description: "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
-        image: "/images/products/bag_05.png"
+        image: "/images/products/ostobacco.jpg"
     },
-    {
-        id: 6,
-        name: "Charming Series",
-        price: 689.99,
-        description: "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
-        image: "/images/products/bag_06.png"
-    }
 ]

@@ -4,8 +4,8 @@ import { darken, lighten } from "polished";
 export const DrawerWidth = 250;
 
 export const Colors = {
-  primary: "#5f2c3e",
-  secondary: "#d1adcc",
+  primary: "#4d6600",
+  secondary: "#ac852c",
   success: "#4CAF50",
   info: "#00a2ff",
   danger: "#FF5722",
@@ -21,11 +21,12 @@ export const Colors = {
   ///////////////
   dim_grey: "#696969",
   dove_gray: "#d5d5d5",
-  body_bg: "#f3f6f9",
+  body_bg: "#1d2127",
   light_gray: "rgb(230,230,230)",
   ///////////////
   // Solid Color
   ///////////////
+  //font color
   white: "#fff",
   black: "#000",
 };

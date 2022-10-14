@@ -24,7 +24,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xl" sx={{ background: '#fff' }}
+      <Container maxWidth="xl" sx={{ background: '#333333' }}
       >
         <UIProvider>
           <Navbar />

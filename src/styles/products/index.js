@@ -48,7 +48,7 @@ export const ProductAddToCart = styled(Button, {
   [theme.breakpoints.up("md")]: {
     position: "absolute",
     bottom: "2%",
-    width: "300px",
+    width: "280px",
     padding: "10px 5px",
     animation:
       show &&
