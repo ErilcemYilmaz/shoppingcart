@@ -13,7 +13,7 @@ export const SliderContainer = styled(Box)(({ theme }) => ({
       alignItems: "center",
       padding: "20px 0px 20px 0px",
       overflow: "hidden",
-      background: Colors.secondary,
+      background: Colors.container_bg,
 
 }));
 
