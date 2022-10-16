@@ -1,6 +1,7 @@
 import { useTheme } from "@mui/material/styles";
 import { Paper, Typography, useMediaQuery } from "@mui/material"
 import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerShopButton, BannerTitle } from '../../styles/banner'
+import { Colors } from "../../styles/theme";
 
 export default function Banner() {
     const theme = useTheme();
@@ -9,11 +10,11 @@ export default function Banner() {
     return (
         <Paper elevation={24} >
             <BannerContainer>
-                <BannerImage src="images/banner/banner.png" />
-                <BannerContent>
+                <BannerImage src="images/products/ostobacco.png" />
+                <BannerContent sx={{color: Colors.white}}>
                     <Typography variant="h6">Grosse Kollektion</Typography>
                     <BannerTitle variant="h2">Neue Sorte</BannerTitle>
-                    <BannerDescription variant="subtitle">skrr paaaaa</BannerDescription>
+                    <BannerDescription variant="subtitle">Os Tabacco</BannerDescription>
                     <BannerShopButton color="primary">Jezt Bestellen</BannerShopButton>
                 </BannerContent>
             </BannerContainer>
