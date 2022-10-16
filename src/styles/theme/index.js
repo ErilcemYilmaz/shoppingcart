@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { darken, lighten } from "polished";
+import { lighten } from "polished";
 
 export const DrawerWidth = 250;
 
@@ -23,6 +23,7 @@ export const Colors = {
   dove_gray: "#d5d5d5",
   body_bg: "#1d2127",
   light_gray: "rgb(230,230,230)",
+  container_bg: "#333333",
   ///////////////
   // Solid Color
   ///////////////
@@ -65,17 +66,17 @@ const theme = createTheme({
       styleOverrides: {
         paper: {
           width: DrawerWidth,          
-          background: Colors.primary,
+          background: Colors.container_bg,
           color: Colors.secondary,
           borderRadius: '0px 100px 0px 0px',
-          borderRight: `1px solid ${Colors.primary}`
+          borderRight: `1px solid ${Colors.container_bg}`
         }
       }
     },
     MuiDivider: {
       styleOverrides: {
         root: {
-          borderColor: lighten(0.2, Colors.primary)
+          borderColor: lighten(0.2, Colors.secondary)
         }
       }
     },
