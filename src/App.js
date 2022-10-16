@@ -11,6 +11,7 @@ import AppDrawer from './components/drawer';
 import { UIProvider } from './context/ui';
 import SearchBox from './components/search';
 import Cart from './components/cart';
+import {Colors} from './styles/theme'
 
 
 
@@ -24,14 +25,14 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xl" sx={{ background: '#333333' }}
+      <Container maxWidth="xl" sx={{ background: Colors.container_bg }}
       >
         <UIProvider>
           <Navbar />
           <Banner />
           <Slider />
           <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
-            <Typography variant="h4">Unsere Produkte</Typography>
+            <Typography variant="h4" color={Colors.white}>Unsere Produkte</Typography>
           </Box>
           <Products />
           <Footer />
