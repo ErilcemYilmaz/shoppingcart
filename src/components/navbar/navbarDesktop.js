@@ -4,6 +4,7 @@ import { NavbarList, NavbarContainer, NavbarHeader } from "../../styles/navbar";
 import SearchIcon from '@mui/icons-material/Search'
 import Actions from "./actions";
 import { useUIContext } from "../../context/ui";
+import { Colors } from "../../styles/theme";
 
 
 
@@ -13,7 +14,7 @@ export default function NavbarDesktop({matches}){
     return (
         <NavbarContainer>
             <NavbarHeader>
-                Skrr pa
+                Lula Lounge
             </NavbarHeader>
             <NavbarList type="row">
                 <ListItemText primary="Start"/>
@@ -21,7 +22,7 @@ export default function NavbarDesktop({matches}){
                 <ListItemText primary="Produkte"/>
                 <ListItemText primary="Kontaktiere uns"/>
                 <ListItemButton>
-                    <ListItemIcon>
+                    <ListItemIcon className="SearchIcon">
                         <SearchIcon onClick={() => setShowSearchBox(true)}/>
                     </ListItemIcon>
                 </ListItemButton>

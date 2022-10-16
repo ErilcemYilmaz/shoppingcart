@@ -4,6 +4,7 @@ import Actions from "./actions";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search"
 import { useUIContext } from "../../context/ui";
+import { Colors } from "../../styles/theme";
 
 
 export default function NavbarMobile({ matches }) {
@@ -16,10 +17,10 @@ export default function NavbarMobile({ matches }) {
                 <MenuIcon />
             </IconButton>
             <NavbarHeader textAlign={"center"} variant="h4">
-                Shisha
+            Lula Lounge
             </NavbarHeader>
             <IconButton onClick={() => setShowSearchBox(true)}>
-                <SearchIcon />
+                <SearchIcon sx={{color: Colors.white}}/>
             </IconButton>
             <Actions matches={matches} />
         </NavbarContainer>
