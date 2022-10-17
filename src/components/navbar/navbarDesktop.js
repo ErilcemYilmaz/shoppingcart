@@ -14,7 +14,7 @@ export default function NavbarDesktop({matches}){
     return (
         <NavbarContainer>
             <NavbarHeader>
-                Lula Lounge
+                Lalu Lounge
             </NavbarHeader>
             <NavbarList type="row">
                 <ListItemText primary="Start"/>

@@ -17,7 +17,7 @@ export default function NavbarMobile({ matches }) {
                 <MenuIcon />
             </IconButton>
             <NavbarHeader textAlign={"center"} variant="h4">
-            Lula Lounge
+            Lalu Lounge
             </NavbarHeader>
             <IconButton onClick={() => setShowSearchBox(true)}>
                 <SearchIcon sx={{color: Colors.white}}/>
