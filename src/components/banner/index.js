@@ -14,7 +14,7 @@ export default function Banner() {
                 <BannerContent sx={{color: Colors.white}}>
                     <Typography variant="h6">Grosse Kollektion</Typography>
                     <BannerTitle variant="h2">Neue Sorte</BannerTitle>
-                    <BannerDescription variant="subtitle">Os Tabacco</BannerDescription>
+                    <BannerDescription variant="subtitle">Os Tabacco - African Queen</BannerDescription>
                     <BannerShopButton color="primary">Jezt Bestellen</BannerShopButton>
                 </BannerContent>
             </BannerContainer>
