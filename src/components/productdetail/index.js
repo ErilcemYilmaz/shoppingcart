@@ -7,14 +7,12 @@ import {
     DialogContent,
     Typography,
     Button,
-    Stack,
   } from "@mui/material";
-  import { useRef } from "react";
+
   import CloseIcon from "@mui/icons-material/Close";
   import { Colors } from "../../styles/theme";
   import styled from "@emotion/styled";
-  import { ProductAddToCart, Product, ProductImage } from "../../styles/products";
-  import { BannerShopButton } from "../../styles/banner";
+  import {  Product, ProductImage } from "../../styles/products";
   import IncDec from "../ui/indec";
   import FacebookIcon from "@mui/icons-material/Facebook";
   import TwitterIcon from "@mui/icons-material/Twitter";
@@ -22,7 +20,7 @@ import {
   import FavoriteIcon from "@mui/icons-material/Favorite";
   import { useTheme } from "@mui/material/styles";
   import { useMediaQuery } from "@mui/material";
-  
+
   function SlideTransition(props) {
     return <Slide direction="down" {...props} />;
   }
@@ -87,7 +85,7 @@ import {
                 alignItems="center"
                 justifyContent="space-between"
               >
-                <IncDec />
+                <IncDec product={product}/>
                 <Button variant="contained">Add to Cart</Button>
               </Box>
               <Box

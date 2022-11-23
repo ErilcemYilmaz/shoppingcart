@@ -2,6 +2,7 @@ import { useTheme } from "@emotion/react";
 import { Avatar, Box, Button, Divider, Drawer, Paper, Typography, useMediaQuery } from "@mui/material";
 import { useUIContext } from "../../context/ui";
 import { Colors } from "../../styles/theme";
+import IncDec from "../ui/indec";
 
 
 export default function Cart() {
@@ -28,6 +29,8 @@ export default function Cart() {
             </Box>
             {matches && <Typography variant="subtitle2">{item.description}</Typography>}
             <Divider variant="inset" />
+            <IncDec product={item} />
+
         </Box>
     ));
 
