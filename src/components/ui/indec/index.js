@@ -26,10 +26,10 @@ export default function IncDec({product}) {
           variant="h6"
           sx={{
 
-            p: 2,
+            m: 0,
           }}
         >
-          {value}
+          <p>{value}</p>
         </Typography>
         <IconButton
           sx={{
