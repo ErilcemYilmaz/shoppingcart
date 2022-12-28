@@ -40,7 +40,7 @@ export default function IncDec({product}) {
         >
           <AddIcon />
         </IconButton>
-            <Typography id="test" sx={{ p: 3,
+            <Typography id="total" sx={{ p: 3,
             }}  key={product.id}>Total: {( priceAfter ).toFixed(2)}</Typography>
             <br/>
       </Box>
