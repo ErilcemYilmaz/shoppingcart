@@ -36,13 +36,14 @@ export default function Cart() {
 
     return (
         <Drawer
+            backgroundColor={Colors.body_bg}
             open={showCart}
             onClose={() => setShowCart(false)}
             anchor="right"
             PaperProps={{
                 sx: {
                     width: matches ? '100%' : 500,
-                    background: Colors.light_gray,
+                    background: Colors.container_bg,
                     borderRadius: 0
                 }
             }}>
@@ -52,19 +53,24 @@ export default function Cart() {
                 justifyContent={"center"}
                 flexDirection="column"
                 alignItems="center">
-                <Typography variant="h3" color={Colors.black}>Dein Warenkorb</Typography>
+                <Typography variant="h3" color={Colors.secondary}>Dein Warenkorb</Typography>
                 <Typography variant="body1" color={Colors.muted}>
                     {" "}
                     Lorem ipsum dolor sit amet cons adipisicing elit sed do eiusm tempor
                     incididunt ut labor et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud.
+
                 </Typography>
                 <Paper
                     elevation={0} sx={{
                         mt: 2,
                         width: '90%',
-                        padding: 4
+                        padding: 4,
+                        backgroundColor: Colors.body_bg,
+                        color: Colors.white
+                        
                     }}>
+                    
                     {cartContent}
                 </Paper>
                 <Button sx={{ mt: 4 }} variant="contained">Zur Kasse</Button>
@@ -73,7 +79,7 @@ export default function Cart() {
                 display="flex" justifyContent={"center"}
                 flexdirection="column"
                 alignItems="center">
-                <Typography variant={matches ? "h5" : "h3"} color={Colors.white}>Warenkorb leer!</Typography>
+                <Typography variant={matches ? "h5" : "h3"} color={Colors.secondary}>Warenkorb leer!</Typography>
             </Box>
             )}
             <Button onClick={() => setShowCart(false)}>Schließen</Button>
