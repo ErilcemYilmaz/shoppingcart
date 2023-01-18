@@ -5,6 +5,8 @@ import { Colors } from "../../styles/theme";
 import IncDec from "../ui/indec";
 
 
+
+
 export default function Cart() {
 
     const { cart, setShowCart, showCart } = useUIContext();
@@ -74,7 +76,6 @@ export default function Cart() {
                     {cartContent}
                 </Paper>
                 <Button sx={{ mt: 4 }} variant="contained">Zur Kasse</Button>
-
             </Box> : (<Box sx={{ p: 4 }}
                 display="flex" justifyContent={"center"}
                 flexdirection="column"
@@ -82,7 +83,7 @@ export default function Cart() {
                 <Typography variant={matches ? "h5" : "h3"} color={Colors.secondary}>Warenkorb leer!</Typography>
             </Box>
             )}
-            <Button onClick={() => setShowCart(false)}>Schließen</Button>
+            <Button onClick={() => setShowCart(false)}>Schliessen</Button>
 
 
         </Drawer>
