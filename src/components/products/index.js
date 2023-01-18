@@ -5,6 +5,7 @@ import SingleProduct from "./SingleProduct";
 import SingleProductDesktop from "./SingleProductDesktop";
 import { useState } from "react";
 import Select from '@mui/material/Select';
+import { Colors } from "../../styles/theme";
 
 
 export default function Products() {
@@ -21,6 +22,23 @@ export default function Products() {
     return (
         <Container>
             <Select
+                // IconComponent={() => <ArrowDropDownIcon style={{marginRight:10,pointerEvents:'none'}}/>}
+                labelStyle={{ color: '#ff0000' }}
+                sx={{
+                    color: "white",
+                    '.MuiOutlinedInput-notchedOutline': {
+                        borderColor: Colors.secondary,
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: Colors.secondary,
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: Colors.primary,
+                    },
+                    '.MuiSvgIcon-root ': {
+                        fill: Colors.secondary,
+                    }
+                }}
                 native
                 value={selectValue}
                 onChange={(e) => {
