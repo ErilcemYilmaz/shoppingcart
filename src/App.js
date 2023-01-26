@@ -19,7 +19,7 @@ import {Colors} from './styles/theme'
 function App() {
 
   useEffect(() => {
-    document.title = "ShoppingCart - Home"
+    document.title = "Lalu Lounge"
   }, []);
 
 
