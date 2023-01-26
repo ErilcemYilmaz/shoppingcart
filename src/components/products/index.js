@@ -4,55 +4,38 @@ import { products } from "../../fake_data"
 import SingleProduct from "./SingleProduct";
 import SingleProductDesktop from "./SingleProductDesktop";
 import { useState } from "react";
-import Select from '@mui/material/Select';
-import { Colors } from "../../styles/theme";
+import Select from 'react-select';
+import {customStyles_Selected} from '../../styles/products'
+
+
 
 
 export default function Products() {
 
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('md'));
-    const [category, setCategory] = useState("all");
-    const [selectValue, setSelectValue] = useState("all");
+    const [category, setCategory] = useState("Alle");
+    const [selectValue, setSelectValue] = useState("Alle");
 
-    let filteredProduct = products.filter(product => product.categories === category || category === 'all');
+    let filteredProduct = products.filter(product => product.categories === category || category === 'Alle');
 
     let categories = new Set(products.map(product => product.categories))
-
+    
     return (
         <Container>
             <Select
-                // IconComponent={() => <ArrowDropDownIcon style={{marginRight:10,pointerEvents:'none'}}/>}
-                labelStyle={{ color: '#ff0000' }}
-                sx={{
-                    color: "white",
-                    '.MuiOutlinedInput-notchedOutline': {
-                        borderColor: Colors.secondary,
-                    },
-                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                        borderColor: Colors.secondary,
-                    },
-                    '&:hover .MuiOutlinedInput-notchedOutline': {
-                        borderColor: Colors.primary,
-                    },
-                    '.MuiSvgIcon-root ': {
-                        fill: Colors.secondary,
-                    }
+                styles={customStyles_Selected}
+                options={[
+                    { value: 'Alle', label: 'Alle' },
+                    ...Array.from(categories).map((category) => ({ value: category, label: category }))
+                ]}
+                onChange={(selectedOption) => {
+                    setSelectValue(selectedOption);
+                    setCategory(selectedOption.value);
                 }}
-                native
                 value={selectValue}
-                onChange={(e) => {
-                    setSelectValue(e.target.value);
-                    setCategory(e.target.value);
-                }}
-            >
-                <option value="all">All</option>
-                {Array.from(categories).map((category) => (
-                    <option key={category} value={category}>
-                        {category}
-                    </option>
-                ))}
-            </Select>
+                placeholder="Alle"
+            />
             <Grid container
                 spacing={{ xs: 3, md: 4 }}
                 justifyContent={"center"}
